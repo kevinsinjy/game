@@ -19,7 +19,7 @@ var numClick = 0;
 var essai = 6;
 
 function myFunction() {
-    var x, text, text2;
+    var x, text;
 
     x = document.getElementById("number").value;
 
@@ -27,15 +27,15 @@ function myFunction() {
         alert("BRAVO !");
         console.log('BRAVO!');
     } else if (x < solution) {
-        text = "le chiffre est trop petit";
+        alert("le chiffre est trop petit");
         console.log('le chiffre est trop petit');
 
     } else if (x > solution) {
-        text = "le chiffre est trop grand";
+        alert("le chiffre est trop grand");
         console.log('le chiffre est trop grand');
     }
     numClick++;
-    text2="Il vous reste :" + (essai - numClick) + "essai(s)";
+    text="Il vous reste :" + (essai - numClick) + "essai(s)";
 
     if (numClick >= 6) {
 
