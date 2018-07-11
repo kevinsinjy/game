@@ -19,7 +19,7 @@ var numClick = 0;
 var essai = 6;
 
 function myFunction() {
-    var x, text;
+    var x, text, text2;
 
     x = document.getElementById("number").value;
 
@@ -35,7 +35,7 @@ function myFunction() {
         console.log('le chiffre est trop grand');
     }
     numClick++;
-    text="Il vous reste :" + (essai - numClick) + "essai(s)";
+    text2="Il vous reste :" + (essai - numClick) + "essai(s)";
 
     if (numClick >= 6) {
 
