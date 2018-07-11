@@ -11,37 +11,36 @@ console.log("Bienvenue dans ce jeu de devinette !");
 var solution = Math.floor(Math.random() * 100) + 1;
 
 // Décommentez temporairement cette ligne pour mieux vérifier le programme
-//console.log("(La solution est " + solution + ")");
+console.log("(La solution est " + solution + ")");
 
 // TODO : complétez le programme
 
-var numClick = 0;
 var essai = 6;
-
+//var reload = window.location.reload(true); 
 function myFunction() {
-    var x, text;
 
+    var x, text;
     x = document.getElementById("number").value;
 
     if (x == solution) {
-        alert("BRAVO !");
-        console.log('BRAVO!');
+        alert("GG !");
+        window.location.reload(true);
+
     } else if (x < solution) {
-        alert("le chiffre est trop petit");
-        console.log('le chiffre est trop petit');
+        text = x + " is too small";
 
     } else if (x > solution) {
-        alert("le chiffre est trop grand");
-        console.log('le chiffre est trop grand');
+        text = x + " is too great";
     }
-    numClick++;
-    text="Il vous reste :" + (essai - numClick) + "essai(s)";
+    essai--;
 
-    if (numClick >= 6) {
+    var text2 = essai + " try left";
 
-        alert("Vous avez perdu ! Looser !");
+    if (essai < 0) {
 
+        alert("You loose ! Try again !");
+        window.location.reload(true);
     }
 
-    document.getElementById("answer").innerHTML = text;
-};
+    document.getElementById("answer").innerHTML = text + "\n" + text2;
+}
