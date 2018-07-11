@@ -24,7 +24,7 @@ function myFunction() {
     x = document.getElementById("number").value;
 
     if (x == solution) {
-        text = "BRAVO !";
+        alert("BRAVO !");
         console.log('BRAVO!');
     } else if (x < solution) {
         text = "le chiffre est trop petit";
@@ -35,7 +35,7 @@ function myFunction() {
         console.log('le chiffre est trop grand');
     }
     numClick++;
-    alert("Il vous reste :" + (essai - numClick) + "essai(s)");
+    text="Il vous reste :" + (essai - numClick) + "essai(s)";
 
     if (numClick >= 6) {
 
